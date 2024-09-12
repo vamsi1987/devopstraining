@@ -1,0 +1,366 @@
+ubuntu@ip-172-31-15-109:~$ 
+ubuntu@ip-172-31-15-109:~$ 
+ubuntu@ip-172-31-15-109:~$ sudo su -
+root@ip-172-31-15-109:~# 
+root@ip-172-31-15-109:~# 
+root@ip-172-31-15-109:~# history
+    1  sudo systemctl restart
+    2  systemctl restart
+    3  systemctl service restart
+    4  restart
+    5  sudo reboot
+    6  ll
+    7  sudo apt update
+    8  sudo apt install default-jre
+    9  java -version
+   10  mvn -version
+   11  sudo apt install default-jdk
+   12  ll
+   13  clear
+   14  ll
+   15  javac -version
+   16  java -version
+   17  pwd
+   18  cd root/
+   19  clear
+   20  pwd
+   21  ll
+   22  cd etc/profiles
+   23  clear
+   24  java -version
+   25  sudo apt install wget
+   26  wget https://download.java.net/java/GA/jdk13.0.1/cec27d702aa74d5a8630c65ae61e4305/9/GPL/openjdk-13.0.1_linux-x64_bin.tar.gz
+   27  ll
+   28  rm -rf openjdk-13.0.1_linux-x64_bin.tar.gz 
+   29  ll
+   30  wget https://dlcdn.apache.org/maven/maven-3/3.9.9/binaries/apache-maven-3.9.9-bin.tar.gz
+   31  ll
+   32  mv apache-maven-3.9.9-bin.tar.gz  /opt/
+   33  cd opt/
+   34  cd /opt
+   35  ll
+   36  tar -xvf apache-maven-3.9.9-bin.tar.gz 
+   37  sudo
+   38  java -version
+   39  sudo su -
+   40  java -version
+   41  vi /~.profile
+   42  cd tomcat
+   43  ll
+   44  ll
+   45  cd /opt
+   46  ll
+   47  cd apache-maven-3.9.9/
+   48  M2_HOME='/opt/apache-maven-3.9.9'
+   49  PATH="$M2_HOME/bin:$PATH"
+   50  export PATH
+   51  cat /~.profile
+   52  mvn -version
+   53  /etc/profile
+   54  ll
+   55  source.profile
+   56  clear
+   57  ls
+   58  vi /~.profile
+   59  ll
+   60  cd ..
+   61  cat ~/.profile
+   62  mvn -version
+   63  ll
+   64  cd apache-maven-3.9.9/
+   65  mvn -version
+   66  java -version
+   67  cd ..
+   68  sudo su -
+   69  ll
+   70  cd tmp
+   71  ll
+   72  cd apache-tomcat-10.1.29/
+   73  ll
+   74  /etc/ssh/sshd_config
+   75  vi /etc/ssh/sshd_config
+   76  cat sshd_config
+   77  mvn --version
+   78  mvn -version
+   79  java -version
+   80  apt-get install git -y
+   81  git status
+   82  git clone https://github.com/mkyong/spring3-mvc-maven-xml-hello-world.git
+   83  ls
+   84  cd spring3-mvc-maven-xml-hello-world/
+   85  ls
+   86  mvn -version
+   87  cd /opt/
+   88  ls
+   89  cd ..
+   90  mkdir devopstraining
+   91  cd devopstraining/
+   92  l
+   93  ll
+   94  git init
+   95  git remote add origin https://github.com/vamsi1987/devopstraining.git
+   96  git branch -M main
+   97  git push -u origin main
+   98  git remote add origin https://github.com/vamsi1987/devopstraining.git
+   99  git branch -M main
+  100  ls
+  101  git branch
+  102  git status
+  103  git push -u origin main
+  104  echo "# devopstraining" >> README.md
+  105  git init
+  106  git add README.md
+  107  git commit -m "first commit"
+  108  git branch -M main
+  109  git remote add origin https://github.com/vamsi1987/devopstraining.git
+  110  git push -u origin main
+  111  echo "# devopstraining" >> README.md
+  112  git init
+  113  git add README.md
+  114  git commit -m "first commit"
+  115  git branch -M main
+  116  git remote add origin https://github.com/vamsi1987/devopstraining.git
+  117  git push -u origin main
+  118  git clone https://github.com/benc-uk/python-demoapp.git
+  119  git branch
+  120  git status
+  121  git init
+  122  git status
+  123  ls
+  124  cd python-demoapp/
+  125  ls
+  126  git branch
+  127  cd /
+  128  git clone https://github.com/spring-projects/spring-petclinic.git
+  129  cd spring-petclinic/
+  130  ls
+  131  git branch
+  132  git branch *
+  133  git branch*
+  134  git branch -a
+  135  git checkout spring-ai 
+  136  ls
+  137  cd ..
+  138  git clols
+  139  cat ~/.ssh/authorized_keys
+  140  apt-get update -y
+  141  ls
+  142  git clone -b spring-ai https://github.com/spring-projects/spring-petclinic.git
+  143  ls
+  144  cd spring
+  145  cd spring-petclinic/
+  146  ls
+  147  git branch
+  148  git branch -a
+  149  mvn -version
+  150  cd /
+  151  cd /opt/
+  152  ls
+  153  cd apache-maven-3.9.9/
+  154  ls
+  155  pwd
+  156  cat <<EOF | tee /etc/profile.d/maven.sh
+  157  export MAVEN_HOME=/opt/maven
+  158  export PATH=\$PATH:\MAVEN_HOME/bin
+  159  EOF
+  160  source /etc/profile.d/maven.sh
+  161  echo $PATH
+  162  mvn -version
+  163  mvn --version
+  164  echo $MAVEN_HOME 
+  165  mvn --version
+  166  echo $PATH
+  167  mvn --version
+  168  cat <<EOF | tee /etc/profile.d/maven.sh
+  169  export MAVEN_HOME=/opt/maven
+  170  export PATH=\$PATH:\MAVEN_HOME/bin
+  171  EOF
+  172  source /etc/profile.d/maven.sh
+  173  echo $MAVEN_HOME 
+  174  echo $PATH
+  175  mvn --version
+  176  cat <<EOF | tee /etc/profile.d/maven.sh
+  177  export MAVEN_HOME=/opt/maven
+  178  export PATH=\$PATH:\MAVEN_HOME/bin
+  179  EOF
+  180  echo $MAVEN_HOME
+  181  mvn --version
+  182  apt install maven -y
+  183  cat /etc/*release
+  184  mvn --version
+  185  cd /
+  186  ls
+  187  cd ..
+  188  ls
+  189  cd
+  190  ls
+  191  cd spring3-mvc-maven-xml-hello-world/
+  192  ls
+  193  cd /
+  194  sudo useradd -m -d /opt/tomcat tomcat
+  195  sudo passwd tomcat
+  196  sudo chsh -s /sbin/nologin tomcat
+  197  mkdir ~/tmp
+  198  cd ~/tmp
+  199  wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.24/bin/apache-tomcat-10.1.24.tar.gz
+  200  wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.29/bin/apache-tomcat-10.1.29.tar.gz
+  201  tar -xvf apache-tomcat-10.1.29.tar.gz 
+  202  sudo chown -R tomcat:tomcat /opt/tomcat/
+  203  sudo chmod -R u+x /opt/tomcat/bin
+  204  sudo chown -R tomcat:tomcat /opt/tomcat/
+  205  sudo chmod -R u+x /opt/tomcat/bin
+  206  cd /opt/tomcat/
+  207  ls
+  208  cd /
+  209  ls
+  210  cd .
+  211  cd
+  212  ls
+  213  cd tmp/
+  214  ls
+  215  sudo tar -xzvf  apache-tomcat-10.1.29.tar.gz -C /opt/tomcat --strip-components=1
+  216  sudo chmod -R u+x /opt/tomcat/bin
+  217  sudo nano /opt/tomcat/conf/tomcat-users.xml
+  218  cat /opt/tomcat/conf/tomcat-users.xml
+  219  sudo update-java-alternatives -l
+  220  sudo nano /etc/systemd/system/tomcat.service
+  221  cat /etc/systemd/system/tomcat.service
+  222  java -version
+  223  sudo apt install default-jdk -y
+  224  java -version
+  225  sudo systemctl daemon-reload
+  226  sudo systemctl start tomcat
+  227  sudo systemctl status tomcat
+  228  sudo systemctl enable tomcat
+  229  sudo ufw enable
+  230  sudo ufw allow ssh
+  231  sudo ufw allow http
+  232  sudo apt install nginx
+  233  sudo nano /etc/nginx/sites-available/default
+  234  cat /etc/systemd/system/tomcat.service
+  235  java -version
+  236  echo $JAVA_HOME
+  237  javac -version
+  238  sudo update-alternatives --config java
+  239  JAVA_HOME="/usr/lib/jvm/java-21-openjdk-amd64/
+  240  JAVA_HOME="/usr/lib/jvm/java-21-openjdk-amd64"
+  241  echo $JAVA_HOME
+  242  sudo systemctl daemon-reload
+  243  cat /etc/systemd/system/tomcat.service
+  244  sudo systemctl start tomcat
+  245  sudo sh -c 'chmod +x /opt/tomcat/bin/*.sh
+  246  sudo sh -c 'chmod +x /opt/tomcat/bin/*.sh'
+  247  sudo systemctl start tomcat
+  248  cd /opt/tomcat/
+  249  ls
+  250  cd conf/
+  251  ls
+  252  cd ..
+  253  cd bin/
+  254  ls
+  255  ./startup.sh 
+  256  cd .
+  257  cd ..
+  258  ls
+  259  cd webapps/
+  260  ls
+  261  cd ..
+  262  cd work/
+  263  ls
+  264  cd ..
+  265  cd webapps/
+  266  ls
+  267  cd manager/
+  268  ls
+  269  cd META-INF/
+  270  ls
+  271  cat context.xml 
+  272  vi context.xml 
+  273  cd ..
+  274  ls
+  275  cd ..
+  276  ls
+  277  cd manager/
+  278  ls
+  279  cd ..
+  280  ls
+  281  cd host-manager/
+  282  ls
+  283  cat index.jsp 
+  284  cd ..
+  285  ls
+  286  cd ..
+  287  ls
+  288  cd conf/
+  289  ls
+  290  cat tomcat-users.xml 
+  291  cd /
+  292  ls
+  293  cd /
+  294  cd
+  295  ls
+  296  cd spring3-mvc-maven-xml-hello-world/
+  297  ls
+  298  mvn -version
+  299  mvn validate 
+  300  mvn package
+  301  ls
+  302  rm -rf target/
+  303  vi pom.xml 
+  304  mvn clean install
+  305  cd /
+  306  git clone https://github.com/AndriyKalashnykov/tomcat-root-war.git
+  307  ls
+  308  cd tomcat-root-war/
+  309  ls
+  310  cat pom.xml 
+  311  mvn -version
+  312  mvn validate
+  313  mvn compile
+  314  mvn package
+  315  ls
+  316  cd target/
+  317  ls
+  318  cat /etc/passwd
+  319  ls
+  320  useradd vamsi
+  321  passwd vamsi
+  322  visudo
+  323  cat /etc/sudoers
+  324  vi /etc/ssh/sshd_config
+  325  systemctl ssh restart
+  326  service sshd restart
+  327  systemctl sshd restart
+  328  systemctl sshd stop
+  329  systemctl restart ssh
+  330  useradd ubuntu
+  331  passwd ubuntu
+  332  vi /etc/ssh/sshd_config
+  333  cat ~./ssh
+  334  cat /~.ssh
+  335  cd ~./ssh
+  336  cd /~.ssh
+  337  cd ~./ssh
+  338  cat .ssh/authorized_keys
+  339  cd /
+  340  cat ~/.ssh/authorized_keys
+  341  vi  ~/.ssh/authorized_keys
+  342  cat  ~/.ssh/authorized_keys
+  343  vi  ~/.ssh/authorized_keys
+  344  su - vamsi
+  345  sudo su - vamsi
+  346  cat  ~/.ssh/authorized_keys
+  347  vi  ~/.ssh/authorized_keys
+  348  restart
+  349  restartd
+  350  reboot
+  351  sudo su - vamsi
+  352  sudo adduser new_user
+  353  sudo adduser new_user --disabled-password
+  354  sudo su - new_user
+  355  exit
+  356  cat  ~/.ssh/authorized_keys
+  357  sudo su -
+  358  exi
+  359  exiy
+  360  exit
