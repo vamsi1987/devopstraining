@@ -1,0 +1,86 @@
+
+sudo su -
+yum update -y
+yum update wget curl -y
+wget https://download.java.net/java/GA/jdk17.0.2/dfd4a8d0985749f896bed50d7138ee7f/8/GPL/openjdk-17.0.2_linux-x64_bin.tar.gz
+tar -xvzf openjdk-17.0.2_linux-x64_bin.tar.gz
+pwd
+mv jdk-17 /opt/jdk-17
+
+cd /opt/
+ls
+
+wget https://dlcdn.apache.org/maven/maven-3/3.8.8/binaries/apache-maven-3.8.8-bin.tar.gz
+tar -xvzf apache-maven-3.8.8-bin.tar.gz
+ls
+
+vi /etc/profile
+#Add these 
+export JAVA_HOME=/opt/jdk-17
+export PATH=$PATH:$JAVA_HOME/bin
+export PATH=$PATH:/opt/apache-maven-3.8.8/bin
+export M2_HOME=/opt/apache-meaven-3.8.8
+#save and quit
+
+run the below command
+source /etc/profile
+
+java -version
+mvn -version
+
+#### you can get all your downloads here https://www.sonarsource.com/products/sonarqube/downloads/historical-downloads/
+##### https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.9.6.92038.zip?_gl=1*w0i6he*_gcl_au*MTQ4MzgxOTEyNi4xNzI2MzA2OTk5*_ga*MTQ2MTk3MTQ5Ny4xNzI2MzA2OTk5*_ga_9JZ0GZ5TC6*MTcyNjM5NTQzOC4yLjEuMTcyNjQwMTk2Mi4xLjAuMA..
+##### copy the download link and remove till zip 
+
+pwd
+#### /opt/
+ls
+
+wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.9.6.92038.zip
+ls
+yum install unzip -y
+unzip sonarqube-9.9.6.92038.zip
+
+ls -la 
+mv sonarqube-9.9.6.92038 sonarqube-9.9.6
+
+#### if we want to sonarqube , we need to create the user called "sonar"
+useradd sonar
+
+############# add sonar user into sudoers file ##########
+visudo
+
+sonar   ALL=(ALL)       NOPASSWD: ALL
+
+save and quit
+
+###############################################4-read 2 --- write 1--- execute
+#### adding permissions to the directory users 7(4+2+1) group 5(4+1) others 5(4+1)
+chmod -R 775 /opt/sonarqube-9.9.6
+### we need to change the ownership from root to sonar######
+chown -R sonar:sonar /opt/sonarqube-9.9.6
+
+ls -la
+
+cd sonarqube-9.9.6
+ls
+#### Bin folder############
+cd bin
+####open linux
+cd linux-x86-64
+
+#### enter into server using sonar user
+su - sonar 
+ cd /opt/
+cd sonarqube-9.9.6/bin/linux-x86-64
+
+ls
+
+sh sonar.sh start
+sh sonar.sh status
+
+### sonarqube 9000 ---> open port ---->
+
+
+####Copy the IP address and paste in web browser IPaddress:9000/
+#### username:admin password:admin
