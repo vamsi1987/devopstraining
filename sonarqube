@@ -84,3 +84,12 @@ sh sonar.sh status
 
 ####Copy the IP address and paste in web browser IPaddress:9000/
 #### username:admin password:admin
+
+
+When we try to create the run the sonar in your project 
+you need to create the project and link it manually , then you will be the output to run the below commands in the server
+
+for example 
+mvn sonar:sonar -Dsonar.host.url=http://13.234.78.161:9000 -Dsonar.login=squ_9353003d3d90f865b4c975080c6666799bd519b9
+
+host Ip address and token need to be updated as per your project
